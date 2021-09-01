@@ -1,9 +1,9 @@
 modules:
   macro:
-    - key: eth-wallet-hello-world
+    - key: eth-wallet
       function: main
       title: ETH wallet
-      description: Inserts Hello world!
+      description: ETH Wallet Confluence
   function:
     - key: main
       handler: index.run
