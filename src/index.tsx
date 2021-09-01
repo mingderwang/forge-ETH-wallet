@@ -1,15 +1,19 @@
-import ForgeUI, { useState, Button, Macro, render } from '@forge/ui';
+import ForgeUI, { useAction, Button, Macro, render } from '@forge/ui'
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useAction(
+    (currentCount, step: number) => currentCount + step,
+    0,
+  )
   return (
     <Button
       text={`Count is ${count}`}
       onClick={() => {
-        setCount(count + 1);
+        // what we call "setCount" with will be "step" in reducer
+        setCount(1)
       }}
     />
-  );
-};
+  )
+}
 
-export const run = render(<Macro app={<App />} />);
+export const run = render(<Macro app={<App />} />)
