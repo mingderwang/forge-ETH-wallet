@@ -15,7 +15,7 @@ const App = () => {
   // Use the configuration values
   return (
     <Text>
-      {config.name === undefined?'x':config.name} is {config.age === undefined?'x':config.age} years old.
+      {(config === undefined)?'x': (config.name === undefined)?'x':config.name} is {(config === undefined )?'x' : (config.age === undefined)?'x':config.age} years old.
     </Text>
   );
 };
