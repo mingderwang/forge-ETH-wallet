@@ -1,0 +1,11 @@
+modules:
+  macro:
+    - key: eth-wallet-hello-world
+      function: main
+      title: ETH wallet
+      description: Inserts Hello world!
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/22474b5d-52b8-4f8e-8d02-f72115163614
