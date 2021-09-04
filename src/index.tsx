@@ -1,26 +1,41 @@
 import ForgeUI, {
+  useEffect,
   useConfig,
   Text,
   TextField,
   Macro,
   MacroConfig,
   render,
-} from '@forge/ui';
+  SectionMessage,
+} from '@forge/ui'
+
+const defaultConfig = {
+  name: 'Unnamed Pet',
+  age: '0',
+}
+
+import { Sdk } from 'etherspot'
+
+let sdk: Sdk // current sdk instance
+console.log(sdk)
 
 const App = () => {
   // Retrieve the configuration
-  const config = useConfig();
-  console.log(config)
+  const config = useConfig() || defaultConfig
 
-  // Use the configuration values
-  return (
+  //  sdk = new Sdk('0xa3775904fafa1f7c522b08d45b2b9732af4d839fb7a97a0ff103754bcc208421')
+  //  console.log(sdk)
+
+  return
+  ;<SectionMessage title="Heading" appearance="info">
     <Text>
-      {(config === undefined)?'x': (config.name === undefined)?'x':config.name} is {(config === undefined )?'x' : (config.age === undefined)?'x':config.age} years old.
+      {config.name} is {config.age} years old.
     </Text>
-  );
-};
+    ;
+  </SectionMessage>
+}
 
-export const run = render(<Macro app={<App />} />);
+export const run = render(<Macro app={<App />} />)
 
 // Function that defines the configuration UI
 const Config = () => {
@@ -29,7 +44,7 @@ const Config = () => {
       <TextField name="name" label="Pet name" />
       <TextField name="age" label="Pet age" />
     </MacroConfig>
-  );
-};
+  )
+}
 
-export const config = render(<Config />);
+export const config = render(<Config />)
