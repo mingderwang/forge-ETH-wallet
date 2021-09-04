@@ -18,9 +18,9 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "@forge/api": "^2.2.1",
-    "@forge/ui": "^0.13.1",
-    "@forge/ui-confluence": "^0.7.4",
+    "@forge/api": "0.0.4",
+    "@forge/ui": "0.4.4-rc.1",
+    "@forge/ui-confluence": "^0.1.0",
     "lodash.times": "^4.3.2"
   }
 }

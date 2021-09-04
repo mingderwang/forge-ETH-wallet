@@ -13,6 +13,7 @@ modules:
       handler: config.run
 app:
   id: ari:cloud:ecosystem::app/22474b5d-52b8-4f8e-8d02-f72115163614
+  name: eth-wallet
 permissions:
   scopes:
     - "read:me"
