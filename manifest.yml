@@ -5,11 +5,17 @@ modules:
       title: ETH wallet
       description: ETH Wallet Confluence
       config:
-        function: config-function-key
+        function: config
   function:
     - key: main
       handler: index.run
-    - key: config-function-key
-      handler: index.config
+    - key: config
+      handler: config.run
 app:
   id: ari:cloud:ecosystem::app/22474b5d-52b8-4f8e-8d02-f72115163614
+permissions:
+  scopes:
+    - "read:me"
+    - "read:confluence-props"
+    - "write:confluence-props"
+    - "read:jira-user"

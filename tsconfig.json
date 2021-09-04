@@ -12,5 +12,6 @@
     "jsx": "react",
     "jsxFactory": "ForgeUI.createElement"
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "files": ["./typings/global.d.ts"]
 }

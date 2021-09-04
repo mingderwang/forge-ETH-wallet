@@ -18,13 +18,9 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "@forge/api": "^2.2.1",
     "@forge/ui": "^0.13.1",
     "@forge/ui-confluence": "^0.7.4",
-    "bufferutil": "^4.0.3",
-    "ethers": "^5.4.6",
-    "etherspot": "^1.16.4",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.3.0",
-    "utf-8-validate": "^5.0.5"
+    "lodash.times": "^4.3.2"
   }
 }
