@@ -6,7 +6,6 @@ import ForgeUI, {
   Macro,
   MacroConfig,
   render,
-  SectionMessage,
 } from '@forge/ui'
 
 const defaultConfig = {
@@ -26,13 +25,12 @@ const App = () => {
   //  sdk = new Sdk('0xa3775904fafa1f7c522b08d45b2b9732af4d839fb7a97a0ff103754bcc208421')
   //  console.log(sdk)
 
-  return
-  ;<SectionMessage title="Heading" appearance="info">
+  return(
     <Text>
       {config.name} is {config.age} years old.
     </Text>
+)
     ;
-  </SectionMessage>
 }
 
 export const run = render(<Macro app={<App />} />)
