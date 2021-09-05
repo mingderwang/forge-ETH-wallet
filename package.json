@@ -24,6 +24,7 @@
     "ethers": "^5.4.6",
     "etherspot": "^1.16.4",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.3.0"
+    "rxjs": "^7.3.0",
+    "utf-8-validate": "^5.0.5"
   }
 }
