@@ -5,12 +5,28 @@ import ForgeUI, {
   Macro,
   MacroConfig,
   render,
+  useEffect,
 } from '@forge/ui';
+import { Sdk } from 'etherspot';
+
+let sdk: Sdk
+
 
 const App = () => {
   // Retrieve the configuration
   const config = useConfig();
-  console.log(config)
+
+useEffect(async () => {
+  sdk = new Sdk({
+    privateKey: '0xf56c89a940a55b09a97ae835b645b225c6d080fce0ba8dc9057dc87e12be6be6',
+  });
+  const signature = await sdk.signMessage({
+    message: 'eu non nisi consectetur minim cillum velit pariatur ea magna',
+  });
+  console.log('signature', signature);
+   
+}, []);
+
 
   // Use the configuration values
   return (
