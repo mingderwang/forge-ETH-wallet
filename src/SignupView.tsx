@@ -16,7 +16,7 @@ import ForgeUI, {
   import api from "@forge/api";
   
   const SignupView = () => {
-    const { title, fields, ...rest } = useConfig() || {};
+    const { privateKey, title, fields, ...rest } = useConfig() || {};
     const fieldLabels = fields
       ? fields.split(",").map(label => label.trim())
       : Object.entries(rest)
@@ -60,7 +60,7 @@ import ForgeUI, {
                 ];
               });
             }}
-            submitButtonText={`Sign up ${title ? `for ${title} ` : ""}🎉`}
+            submitButtonText={`Sign up ${title ? `for ${title} ` : ""}👽`}
           >
             {fieldLabels.length > 0 && (
               <Text content="**Please fill in the following information before signing up**" />
@@ -71,7 +71,7 @@ import ForgeUI, {
           </Form>
         ) : (
           <Button
-            text={`Sign up ${title ? `for ${title} ` : ""}🎉`}
+            text={`Sign up ${title ? `for ${title} ` : ""}🤡`}
             onClick={async () => {
               const data = await (
                 await api.asUser().requestJira("/rest/api/3/myself")
@@ -82,6 +82,7 @@ import ForgeUI, {
             }}
           />
         )}
+        <Text>private key: {privateKey}</Text>
         {entries.length > 0 && (
           <Fragment>
             <Table>
